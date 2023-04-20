@@ -9,7 +9,7 @@ from Crypto.Random import get_random_bytes
 key = b'SeguridadInforma'
 iv = key
 # la b es para poner la cadena en formato de array de bytes, para que pueda ser utilizada como clave AES
-# Vector de inicialización pseudoaleatorio de 16 bytes, mismo tamaño que la clave
+# Vector de inicialización igual a la clave
 
 def aes_encrypt(plaintext):
     cipher = AES.new(key, AES.MODE_CBC, iv)
