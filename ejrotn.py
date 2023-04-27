@@ -6,7 +6,7 @@ def rotate_char(char, n):
     else:
         return chr((ord(char) - 97 + n) % 26 + 97)
 
-# Esta función sirve tanto para codificar como para descodificar en ROT-N
+# Esta función sirve tanto para codificar como para descodificar
 def rotate_n(string, n):
     rotated = ""
     for char in string:
@@ -15,11 +15,16 @@ def rotate_n(string, n):
 
 def brute_force(string):
     for i in range(1, 26):
-        print(rotate_n(string, i))
+        print("rotado", i, rotate_n(string, i))
 
-# Si queremos codificar en ROT-N descomentamos estas dos líneas y comentamos la otra
-# string, n = input().strip().split()
-# print(rotate_n(string, n))
+print("Presione 1 para rotar N, 2 para realizar fuerza bruta")
 
-brute_force(input().strip())
+if (int(input().strip()) == 1):
+    print("String, y N a rotar:")
+    string, n = input().strip().split()
+    print((rotate_n(string, int(n))))
+else:
+    print("String a rotar 25 veces:")
+    brute_force(input().strip())
+
 
