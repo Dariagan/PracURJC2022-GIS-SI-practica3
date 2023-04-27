@@ -8,7 +8,7 @@ from Crypto.Util.Padding import pad, unpad
 key = b'SeguridadInforma'
 iv = key
 # la b es para poner la cadena en formato de array de bytes, para que pueda ser utilizada como clave AES
-# Vector de inicialización pseudoaleatorio de 16 bytes, mismo tamaño que la clave
+# se hace que el iv sea la clave
 
 def aes_decrypt(ciphertext):
     cipher = AES.new(key, AES.MODE_CBC, iv)
