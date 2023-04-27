@@ -6,7 +6,7 @@ def rotate_char(char, n):
     else:
         return chr((ord(char) - 97 + n) % 26 + 97)
 
-# Esta función sirve tanto para cifrar como para descifrar
+# Esta función sirve tanto para codificar como para descodificar en ROT-N
 def rotate_n(string, n):
     rotated = ""
     for char in string:
@@ -17,7 +17,7 @@ def brute_force(string):
     for i in range(1, 26):
         print(rotate_n(string, i))
 
-# Si queremos cifrar en ROT-N descomentamos estas dos líneas y comentamos la otra
+# Si queremos codificar en ROT-N descomentamos estas dos líneas y comentamos la otra
 # string, n = input().strip().split()
 # print(rotate_n(string, n))
 
